@@ -1,0 +1,12 @@
+[Unit]
+Description=Environment Data logger
+After=network.service
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+ExecStart=/usr/bin/environment.py
+
+[Install]
+WantedBy=multi-user.target
